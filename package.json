@@ -22,7 +22,6 @@
     "lint": "eslint --fix 'src/**/*.{js,jsx,ts,tsx}'",
     "lint-staged": "yarn lint-js-staged",
     "lint-js-staged": "git diff --diff-filter=d --cached --name-only -z -- '*.js' '*.jsx' | xargs -0 -I % sh -c 'git show \":%\" | eslint --stdin --stdin-filename \"%\";'",
-    "postbuild": "cp README.md CHANGELOG.md LICENCE build/",
     "release:dry": "yarn build && npm publish build --tag latest --dry-run",
     "release": "yarn build && yarn publish build --tag latest",
     "watch": "rimraf ./lib && tsc --watch",
