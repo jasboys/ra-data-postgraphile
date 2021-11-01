@@ -14,7 +14,7 @@
   ],
   "license": "Apache-2.0",
   "scripts": {
-    "postinstall": "yarn-deduplicate -s fewer yarn.lock",
+    "postinstall": "yarn dedupe -s fewer yarn.lock",
     "build": "yarn run build:cjs && yarn run build:esm && yarn build:copy-files",
     "build:cjs": "rimraf ./build && tsc --outdir build",
     "build:esm": "rimraf ./build/esm && tsc --outDir build/esm --module es2015",
